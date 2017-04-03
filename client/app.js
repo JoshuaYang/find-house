@@ -6,7 +6,7 @@ map.centerAndZoom(new BMap.Point(120.304186, 31.582261), 16);
 // 创建地址解析器实例
 var myGeo = new BMap.Geocoder();
 
-fetch('http://localhost:8000/output.json')
+fetch('../output.json')
 .then((res) => {
     return res.json();
 })
