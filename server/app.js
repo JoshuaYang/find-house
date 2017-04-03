@@ -24,7 +24,7 @@ function getDatas(url) {
     .charset('gb2312')
     .end(function(err, res) {
         if (err || !res.ok) {
-            console.log('=== error ===');
+            console.log('=== error ===', err.message);
             return;
         }
 
