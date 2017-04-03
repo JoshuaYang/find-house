@@ -43,7 +43,3 @@ function addMarker(item) {
         }
     }, '无锡市');
 }
-
-function openInfo(content,e){
-    
-}

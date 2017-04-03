@@ -28,6 +28,8 @@ function getDatas(url) {
             return;
         }
 
+        console.log(`process url: ${url}`);
+
         const $ = cheerio.load(res.text);
         const $domItems = $('.houseList .list');
 
@@ -45,8 +47,6 @@ function getDatas(url) {
             if(info.area >= minArea
             && info.area <= maxArea
             && (info.price * info.area) <= maxTotalPrice) {
-                console.log('==========', info);
-
                 infoList.push(info);
             }
         });
@@ -68,7 +68,7 @@ function writeToFile() {
     };
 
     fs.writeFile('output.json', JSON.stringify(output), 'utf8', function(){
-        console.log('==========end');
+        console.log('fetch over');
     });
 }
 
