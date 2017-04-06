@@ -1,4 +1,3 @@
-// 百度地图API功能
 var map = new BMap.Map('allmap');
 map.enableScrollWheelZoom();
 map.centerAndZoom(new BMap.Point(120.304186, 31.582261), 16);
